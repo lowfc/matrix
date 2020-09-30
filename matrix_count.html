@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<link rel="shortcut icon" href="sources/logo2.png" type="image/x-icon" />
+  <meta charset="unicode">
+  <title>Матричные уравнения</title>
+  <style>
+  	@import url('hat.css');
+  </style>
+  <header class="header">
+  	<div class='logo'>
+  	<a href="index.html"><img src='sources/nadlogo.png' id='nadlogo'><img src='sources\podlogo.png' id='podlogo'></a>
+ 	</div>
+ 	<input class="enter" placeholder='Поиск'></input>
+ 	<div class="status">
+ 	<ul>
+	<li class='under'><a>Матрицы</a>
+	<div class='collapse'>
+		<ul class = 'nested'>
+			<li align='center'><a href="operations.html">Операции</a></li>
+			<li align='center'><a href="reverted_matrix.html">Обратная матрица</a></li>
+			<li align='center'><a href="matrix_count.html" style="color: white;">Матричные уравнения</a></li>
+		</ul>
+	</div>
+	</li>
+	<li class='main'><a href="determinant.html">Определители</a></li>
+	<li class='main'><a href="range.html">Ранг</a></li>
+	</ul>
+	</div>
+	<div id="trapezium" style="margin-left: 159px;"></div>
+	</header>
+ </head>
+ <body>
+ 	<div class="big-block">
+ 		<p class='big'>Матричные уравнения</p>
+ 	<blockquote> 
+ 		<p>
+ 			Матричным уравнением называется уравнение, состоящее из нескольких матриц-коэффициентов и неизвестной матрицы X.
+ 		</p>
+ 		<footer> <cite>Определение матричного уравнения.</cite></footer>
+ 	</blockquote>
+ 	<p class='regular'>Простейшим матричным уравнением есть уравнение вида AX=B или XA=B, где A, B, X — матрицы.</p>
+ </div>
+ <div class="big-block">
+ 	<p class='big'>Алгоритм решения матричных уравнений</p>
+ 	
+ 	<ul class="markerr">
+ 		<li>Матричное уравнение приводится к одному из простейших уравнений AX = B или XA = B (1), где A,B - известные матрицы, X - искомая матрица.</li>
+ 	
+ 	<blockquote class="warning">
+ 		<p>
+ 			Существует также уравнение вида AXB=C, но оно является комбинацией методов решения двух первых указанных простейших уравнений.
+ 		</p>
+ 		<footer> <cite>Важно.</cite></footer>
+ 	</blockquote>
+ 	
+ 	<p class="regular">Чтобы привести произвольное матричное уравнение к одному из видов (1), надо все известные матрицы по свойствам уравнений перенести вправо, а неизвестную матрицу в левой части и свести подобные.</p>
+ 	<li>Разрешаем полученное простейшее уравнение относительно неизвестной матрицы X.</li>
+ 	<li>Если в результате преобразований получили простейшее уравнение AX=B, то необходимо левую и правую часть этого равенства слева умножить на обратную матрицу A<sup>-1</sup> к матрице A:</li>
+ 	<div class='pic-block'>
+	<img src='sources\matrix21.svg' class="pic" style="transform: scale(1.4);">
+	</div>
+	<blockquote class="warning">
+ 		<p>
+ 			Поскольку умножение матриц некоммутативно, то нужно строго соблюдать умножение слева или справа, иначе это повлияет на результат.
+ 		</p>
+ 		<footer> <cite>Важно.</cite></footer>
+ 	</blockquote>
+ 	<li>Для простейшего уравнения XA=B после умножения справа на обратную матрицу A<sup>-1</sup> получаем:</li>
+ 	<div class='pic-block'>
+	<img src='sources\matrix22.svg' class="pic" style="transform: scale(1.4);">
+	</div>
+	<blockquote class="warning">
+ 		<p>
+ 			Обратная матрица A<sup>-1</sup> находится либо методом союзной матрицы, либо методом присоединенной матрицы.
+ 		</p>
+ 		<footer> <cite>Важно.</cite></footer>
+ 	</blockquote>
+ 	<li>Далее вычисляется одно из произведений A<sup>-1</sup> B или BA<sup>-1</sup>, что и определяет искомую матрицу.</li>
+ 	<li>Делаем проверку, для этого подставляем найденную матрицу X в исходное уравнение.</li>
+ </ul>
+ 	</div>
+ 	<footer style="background: linear-gradient(170deg, #396f93, #1f529f,	#396f93); height: 100px; margin-top: 100px; box-shadow: 0 0 4px rgba(122,122,122,0.3);">
+	<div style="padding-top: 10px;  width: 422px; height: 50px; margin: 20px auto;">
+	<p class="regular" style="font-size: 15px; color: #92C5FA; margin-top: 15px; margin-bottom: 2px; float: left;">Сайт разработан в качестве лабороторной работы для КПО ПГНИУ.</p>
+	<p class="regular" style="font-size: 15px; color: #92C5FA; float: left; margin-bottom: 5px; display: inline-block;">Бутолин Евгений</p>
+	<p class="regular" style="font-size: 15px; color: #92C5FA; float: right; margin-bottom: 5px; display: inline-block;">ПКС-17,18</p>
+	</div>
+</footer>
+ </body>
